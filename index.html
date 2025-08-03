@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Paradise</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <style>
+    /* Gradient background for entire page */
+    body {
+      font-family: Arial, sans-serif;
+      /* Vertical gradient: soft blue to soft purple */
+      background: linear-gradient(180deg, #6a11cb 0%, #2575fc 100%);
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Navbar with slight transparency */
+    .navbar {
+      background-color: rgba(33, 37, 41, 0.85) !important; /* dark with opacity */
+      backdrop-filter: blur(6px);
+    }
+
+    /* Hero section */
+    .hero {
+      background: url('https://via.placeholder.com/1600x600?text=Welcome+to+Hotel+Paradise') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero p.lead {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      border: none;
+      box-shadow: 0 4px 12px rgba(101, 51, 255, 0.6);
+      transition: background 0.3s ease;
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(45deg, #2575fc, #6a11cb);
+    }
+
+    .section-title {
+      margin: 60px 0 30px;
+      color: white; /* white text for contrast */
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .room img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .room img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Container background for rooms and about section for better visibility */
+    #about, #rooms, #contact, #testimonials {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 900px;
+      color: #333;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Logo" height="75" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to Hotel Paradise</h1>
+    <p class="lead">Experience luxury and comfort like never before</p>
+    <a href="#rooms" class="btn btn-primary btn-lg mt-3">Explore Our Rooms</a>
+  </section>
+
+<!-- Carousel -->
+  <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" style="background-color: grey;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/01.jpg" class="d-block w-100" alt="First slide" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/02.jpg" class="d-block w-100" alt="Second slide" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/03.jpg" class="d-block w-100" alt="Third slide" />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="container text-center">
+  <h2 class="section-title">About Us</h2>
+  <p class="fs-5 text-muted mx-auto" style="max-width: 700px;">
+    At <strong>Hotel Paradise</strong>, we offer more than just accommodation — we provide unforgettable experiences. Nestled in a scenic location, we deliver a perfect blend of luxury, tranquility, and warm hospitality.
+  </p>
+  <p class="fs-6 text-muted mx-auto mt-3" style="max-width: 700px;">
+    Whether you're on vacation or business, our premium rooms, elegant suites, and attentive service ensure a memorable stay. Indulge in breathtaking views, explore nearby attractions, or just relax in comfort.
+  </p>
+  <div class="row text-start mt-4 justify-content-center">
+    <div class="col-md-4 text-center">
+      <i class="bi bi-stars" style="font-size: 2rem; color: #6a11cb;"></i>
+      <h5 class="mt-2">Luxury Rooms</h5>
+      <p>Modern decor, plush bedding, and top-notch facilities.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="bi bi-geo-alt-fill" style="font-size: 2rem; color: #6a11cb;"></i>
+      <h5 class="mt-2">Great Location</h5>
+      <p>Just minutes away from scenic beaches and attractions.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="bi bi-award" style="font-size: 2rem; color: #6a11cb;"></i>
+      <h5 class="mt-2">Award-Winning Service</h5>
+      <p>Our team goes above and beyond to meet your needs.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Rooms -->
+  <!-- Explore Rooms -->
+<section id="rooms" class="container text-center my-5">
+  <h2 class="section-title">Explore Our Rooms</h2>
+  <p style="max-width: 700px; margin: auto; font-size: 1.1rem; color: #555;">
+    Discover the comfort and elegance of our different room categories designed for your perfect stay.
+  </p>
+
+  <div class="row mt-4">
+
+    <!-- Room 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="images/room1.jpg" class="card-img-top" alt="Deluxe Room">
+        <div class="card-body">
+          <h5 class="card-title">Deluxe Room</h5>
+          <p class="card-text">Spacious room with king-size bed, balcony, and scenic views.</p>
+          <a href="#contact" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Room 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="images/room2.jpg" class="card-img-top" alt="Suite">
+        <div class="card-body">
+          <h5 class="card-title">Executive Suite</h5>
+          <p class="card-text">Luxury suite with living area, minibar, and premium amenities.</p>
+          <a href="#contact" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Room 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="images/room3.jpg" class="card-img-top" alt="Standard Room">
+        <div class="card-body">
+          <h5 class="card-title">Standard Room</h5>
+          <p class="card-text">Comfortable and budget-friendly with all essential facilities.</p>
+          <a href="#contact" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="container text-center">
+    <h2 class="section-title">What Our Guests Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"Amazing experience! The rooms and service exceeded expectations."</p>
+          <footer class="blockquote-footer">Ravindu .</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"Beautiful views and very comfortable stay. Highly recommended."</p>
+          <footer class="blockquote-footer">Chamindu .</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"The staff was so friendly and helpful. Can't wait to come back!"</p>
+          <footer class="blockquote-footer">Kavindu .</footer>
+        </blockquote>
+      </div>
+    </div>
+</section>
+
+<!-- Contact -->
+  <section id="contact" class="container text-center">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="p-4 rounded shadow-sm" style="background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; max-width: 600px; margin: auto;">
+    <p class="mb-3 fs-5">
+      <i class="bi bi-envelope-fill"></i>
+      <a href="mailto:ravindusandeepa000@gmail.com" class="text-white text-decoration-underline">ravindusandeepa000@gmail.com</a>
+    </p>
+    <p class="mb-3 fs-5">
+      <i class="bi bi-telephone-fill"></i> +94 74 309 3277
+    </p>
+    <p class="fs-5 mt-3">
+      <a href="https://wa.me/94710929859" target="_blank" class="text-white text-decoration-none">
+        <i class="bi bi-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i> Chat with us on WhatsApp
+      </a>
+    </p>
+  </div>
+
+  <!-- Google Map -->
+  <div class="mt-4 shadow-sm rounded" style="overflow:hidden; border-radius:12px;">
+    <iframe src="https://maps.app.goo.gl/h7sSHH5RUd72tMVx6" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hotel Paradise. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Smooth scroll for nav links -->
+<script>
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
